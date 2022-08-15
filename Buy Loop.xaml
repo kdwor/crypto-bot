@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1241,5102</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1217,4829</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Buy_Loop_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -87,7 +87,6 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -96,7 +95,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Loop through BuyList and execute buy transactions for each ticker contained in it if conditions met" sap:VirtualizedContainerService.HintSize="710,5037" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Loop through BuyList and execute buy transactions for each ticker contained in it if conditions met" sap:VirtualizedContainerService.HintSize="710,4764" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="CurrentBuyList" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="BuyListPassed" />
@@ -126,7 +125,7 @@
         <InArgument x:TypeArguments="scg:List(x:String)">[BuyList]</InArgument>
       </Assign.Value>
     </Assign>
-    <If sap2010:Annotation.AnnotationText="Check if buy list is not empty" Condition="[CurrentBuyList.Count&gt;0]" sap:VirtualizedContainerService.HintSize="668,3308" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="Check if buy list is not empty" Condition="[CurrentBuyList.Count&gt;0]" sap:VirtualizedContainerService.HintSize="668,3217" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -135,20 +134,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="632,3090" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="632,2999" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="590,2998" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[CurrentBuyList]">
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="590,2907" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[CurrentBuyList]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:String">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:String" Name="ticker" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="554,2874" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="554,2783" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Default="BINANCECOIN CRT" Name="CurrentTickerName" />
                   </Sequence.Variables>
@@ -158,7 +157,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If sap2010:Annotation.AnnotationText="Check if current position has not been sold less than amounts of minutes provuded by user&#xD;&#xA;" Condition="[TickerDates(ticker)&lt;now.AddMinutes(-WaitTime)]" sap:VirtualizedContainerService.HintSize="512,2782" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If sap2010:Annotation.AnnotationText="Check if current position has not been sold less than amounts of minutes provuded by user&#xA;" Condition="[TickerDates(ticker)&lt;now.AddMinutes(-WaitTime)]" sap:VirtualizedContainerService.HintSize="512,2691" sap2010:WorkflowViewState.IdRef="If_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -166,7 +165,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476,2538" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,2447" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,13 +194,13 @@
                             <InArgument x:TypeArguments="x:String">[ticker.ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: xStation 5" sap:VirtualizedContainerService.HintSize="434,2080" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c4584d62-6420-4f09-a95c-30aa61024435" Version="V2">
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: xStation 5" sap:VirtualizedContainerService.HintSize="434,1989" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c4584d62-6420-4f09-a95c-30aa61024435" Version="V2">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Buy Loop" sap:VirtualizedContainerService.HintSize="376,1864" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <Sequence DisplayName="Buy Loop" sap:VirtualizedContainerService.HintSize="376,1773" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="CurrentMinPositionSize" />
                                 </Sequence.Variables>
@@ -252,24 +251,6 @@
                                     <OutArgument x:TypeArguments="x:String">[CurrentMinPositionSize]</OutArgument>
                                   </uix:NGetText.Text>
                                 </uix:NGetText>
-                                <ui:CommentOut DisplayName="Comment Out - Log" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[CurrentTickerName.ToString + &quot; min vol is &quot; + CurrentMinPositionSize.ToString]" />
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
                                 <uix:NClick ClickType="Single" DisplayName="Click 'CRT'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c4584d62-6420-4f09-a95c-30aa61024435" Version="V1">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://xstation5.xtb.com/?branch=pl#/demo/loggedIn" DesignTimeRectangle="1244, 398, 14, 14" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='popupSymbolInfoDraggable' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='popupSymbolInfoDraggable' tag='DIV' type='' class='xs-popup-close-btn' aaname='' /&gt;" Guid="79c3d372-b309-4e0f-83fc-1345f446b27c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVDhPrdO9CsIwFAVg38RJdDCgg1QEUQTBSUSwgyLiVBxLFwexg5t96CsH6W3+eiOS4SzpzUdzQjrdgaIYiQ8NkzkdbgX1RhNnyM5qf6R1ejHWGAKSlRWd8oeIAcFcVr5JTZe8zhA2A5EwHZltdsY3oyMJkxDEKduHhRDEgRAdu95fQQTxQgiwBqlosU29c3VaoeY439id2fFCeif4E7sz3x4H8hWrd9aGGZB0OyGMoV+uWMIYwtsJXTFSY+fiSf1xwuvG0fS3IwWYjiBO2f8mEqToA7C9FWT8Y0G+AAAAAElFTkSuQmCC" InformativeScreenshot="9e4a592663c3ce3152c663d54efa65a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='xStation 5' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
@@ -318,7 +299,7 @@
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://xstation5.xtb.com/?branch=pl#/demo/loggedIn" DesignTimeRectangle="559, 126, 102, 19" ElementType="Text" FriendlyName="'Open positions'" FullSelectorArgument="&lt;webctrl aaname='Open positions' parentid='contentLayer0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Open positions' parentid='contentLayer0' tag='DIV' type='' class='xs-tab-header xs-tab-header-text' check:innerText='Open positions' /&gt;" Guid="20944cff-f00e-4aea-b5cc-4c2b4a5b2c95" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAXCAYAAADjndqIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOKSURBVGhD7VdPSxtBFO+X6Afw4tUvkOYs5ORBvJhciqAVagmKopS2UCwIihDxsOSQ5GAEI8VASsASSNiDSUBUShaEAWE/yK9vdmaS2WSduNhYF/bwg519s+/fb957s2/eTk0jxutHTFREEBMVEcRERQQxURFBTFREEBOlsHmCtuOgtr8QLJ/aQbHjoFc/QCpQPlmEJyqxAavlgD24cF0X7I8N61MyeG+UsFcHo3japRWx3qyiR+vexY7cc4Aao5g7J8jo370QQhK1hvItJ4jh5ncFxQsbPU4Ys5GbD9ofYYwQ9X8Rjqiv4tS5jSPMyHcpy/YqSwWUvXBo7eCmw7z3LuuivD2ouLnDBnr8ZHKZXo1ST7tly2plaJ/u9O3oMNtIIpMjG7LiXSfAvpLdd3G+lxYyPQ5JkreHw7Zoj4Umf3aqyHq6Utg662qdpYH9RWGjv7djo3kv5Z0KsokxPhgQiqjVnzxBLpqW9n6eejs3eFXwkiqSSI7ZFVglcshzpo4tvvdDBTd8TUEV81W0OWG3FSxxmUwUu64PZC5VqrKjwWhDJVm3wRrY5UlKqASeYGv9CJcOPT+QjH+nE5VYwAK1Qq+iaCZlFlNk109U6pgOFK3ZVXXgg4pF7WV3qJUKOL8SB6p5PMYHA0IRpRLkI2ooAHXazzeFfLdBMr5eV0Qz1L7r+u5QXqa1TJTSnbPld1KPjjA2UqWu0MuTpA4VTxIl/93iCjLLabzjenWi+Hqk9fnjzLW4zS6KsuV/qXMyhA/9vV4lDuk2+WDAhCpqkER9LZ55gDrk3mcQpa/3vQRq3/n0JrFaUq2V8ODgMrci2msootSsHlS83ycDUSYfDHj2jJqhfqsHOJzEoNN+ecxPEccalj6+R4q3pWcQNWqDnreFzFdRs2nP7txsCnOfLdF2VLJDETWoKEvOnSdXlMkHA8IRNZWmfwmuWNz6rDPt1icHqUji0PyQwfVnlGOjnC+g+OuOhrCUhSbqERumGSXtM7uA1eVvKF9zG+S7dlD6xKxLPTQzrR9r9M5P1JNmVBBRJh+8b4MRkijCmP8okUQikn4OuXzk1rdHyZM3IZc5aOY3fK3n6UQZbOi3Kt+tj9pOXh4uLrunYX8YcOvz9qapauStshV060siezrm1vdY63vMBwPCEzUGw21pEngJG68NMVERQUxURPDPiYoxGcRERQQxURFBTFQkMI2/Pvtw934e3DUAAAAASUVORK5CYII=" InformativeScreenshot="633e4f0486b36db9fed141cbbff123de.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='xStation 5' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                           <uix:Target DesignTimeRectangle="565, 159, 56, 15" ElementType="Text" FriendlyName="'POSITION'" FullSelectorArgument="&lt;webctrl parentid='slickgrid_438489position' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='slickgrid_438489position' tag='SPAN' type='' class='slick-column-name' aaname='POSITION' check:innerText='POSITION' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAATCAYAAADMBm6RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKVSURBVFhH7VVdaxpBFO2fEPoiVJFFtFhBDI0EEaNtQ0iyGKJSSYOmSJVam6DStBEtzZplEUUXH/bXnt7ZndXJlm7cPBofDszcOzP3Y86ZeeELSHhO2Ba86dgWvOnwVnCqgb5uQNFmGGoLqPMp2qU97o9jpzZAf0y+iQFV+wM5xfdJORx1Rhgy39Thy7Qw1AfISxJiVVrDzmb7l3FmqB9HkPgyg/qjiJePxQpkUL4nW6/I5xKyHTrr24k59lRwqDKCetdALGjNw+c0n3aQpnH0QiNfC4kw88VxdEtBOwVzXao1g0IJhMx9cRxcDVB+lzR90Rrt+11FmMZ2nH9teyjfGeie71p+l1i+N1V0qVl2Xr5ADhXNwHUpbvo9FZzvrTrFYCZGDYgGT3A5WaB+GFn6WFetLh+Sz0D7NLb0rRDDwU8D/XpOsCUhDx228Ee09SkqaRq7xqK5/Asq+RV9hot9mr9t4EYfQU5Yaz0UbCXelHmg1wU0x1RIiW7qmAWhjvKbt5O+qTG6x5C+IjoS/a/rVWSzSU5LQpDOmC9w+cHe9x+beL5rLMYmklqvgQoxov85A//ZgCj/HTt8/foFc/2qE0tXw/EIzVIOfjrI1NftJ7yy1waLaOpi0hGEsgXIX0mjc+H2BP0u47zv0O08tIn6dY9l6ZdRP1GfQr1voSzol2Htgp36XYFTkLpp2/yn1NUHt7CCSD/v+n0klqlfDWX2gJnNJGrTI2nrl2Htgp36XcHSoXLFfSLVg7vI0wNV2XfI4Iwl8AT9usVic1O/dqMtCaqCfhnWLNihXwf8mQa67LshuisTbUl19oKmicYK0VhhX4gggyfp1zWWrV/76+JsEvTL4OHR2gxsC950bAvedDyzgiX8BZ673itTZiaDAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                                         </scg:List>
                                       </uix:TargetAnchorable.Anchors>
@@ -438,62 +419,14 @@
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out - Log" sap:VirtualizedContainerService.HintSize="668,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_18">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Leaving Buy Loop with &quot; + BuyListPassed.Count.ToString + &quot; positions remaining&quot;]" />
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out - Log" sap:VirtualizedContainerService.HintSize="668,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_19">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[TempInitialTickerList.Count.ToString + &quot; on initial ticker list leaving buy loop&quot;]" />
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Track Loop workflow" sap:VirtualizedContainerService.HintSize="668,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Track Loop.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, s:DateTime)" x:Key="TickerDates">
-          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:DateTime)" ExpressionText="TickerDates" />
-        </InArgument>
-        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="BuyList">
-          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="BuyListPassed" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="Profit">
-          <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="Profit" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="Loss">
-          <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="Loss" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="Multiplier">
-          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Multiplier" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="WaitTime">
-          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="WaitTime" />
-        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, s:DateTime)" x:Key="TickerDates">[TickerDates]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="BuyList">[BuyListPassed]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="Profit">[Profit]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="Loss">[Loss]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="Multiplier">[Multiplier]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="WaitTime">[WaitTime]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

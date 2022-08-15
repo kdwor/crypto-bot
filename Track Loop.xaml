@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1241,3597</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1217,3599</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Track_Loop_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
@@ -100,23 +100,22 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Track_Loop" sap:VirtualizedContainerService.HintSize="1078,3532" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Track_Loop" sap:VirtualizedContainerService.HintSize="1078,3534" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log state of buy list and TickerDates dictionary" sap:VirtualizedContainerService.HintSize="1036,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting tracking loop with &quot; + BuyList.Count.ToString + &quot; remaining on BuyList and &quot; + TickerDates.Count.ToString + &quot; in TickerDates dictionary.&quot;]" />
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: xStation 5" sap:VirtualizedContainerService.HintSize="1036,3026" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d1fe88d5-c164-4114-98da-a7f626f5f258" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: xStation 5" sap:VirtualizedContainerService.HintSize="1036,3028" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d1fe88d5-c164-4114-98da-a7f626f5f258" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1002,2810" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1002,2812" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CurrentTickerProfit" />
               <Variable x:TypeArguments="sd:DataTable" Name="FavList" />
@@ -133,13 +132,13 @@
                 <uix:TargetAnchorable DesignTimeRectangle="562, 179, 1345, 787" FriendlyName="'BINANCECOINCRT2-3.34 %'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='openTradesGrid' tag='DIV' /&gt;" Guid="2142857b-93f4-412f-b000-1beaf38d28f6" InformativeScreenshot="14ae33b8d0fe62dd0702a2b417f3ceb5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='xStation 5' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NExtractData.Target>
             </uix:NExtractData>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[OpenPositions]" DisplayName="For Each Row in Data Table (open positions)" sap:VirtualizedContainerService.HintSize="960,2520" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[OpenPositions]" DisplayName="For Each Row in Data Table (open positions)" sap:VirtualizedContainerService.HintSize="960,2522" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="926,2404" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="926,2406" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Default="BITCOINCASH" Name="TrackerCurrentTicker" />
                       <Variable x:TypeArguments="x:Double" Name="TrackerCurrentProfit" />
@@ -171,25 +170,25 @@
                         <InArgument x:TypeArguments="x:Double">[Double.Parse((CurrentDtRowText.Substring(CurrentDtRowText.ToString.IndexOf("1")+1,CurrentDtRowText.ToString.IndexOf("%")-CurrentDtRowText.ToString.IndexOf("1"))).Substring(0,(CurrentDtRowText.Substring(CurrentDtRowText.ToString.IndexOf("1")+1,CurrentDtRowText.ToString.IndexOf("%")-CurrentDtRowText.ToString.IndexOf("1"))).IndexOf(" ")))]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:LogMessage DisplayName="Log Current tickers profit" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;TrackerINFO || Ticker: &quot;+ TrackerCurrentTicker + &quot; // Profit: &quot; + TrackerCurrentProfit.ToString]" />
-                    <If Condition="[TrackerCurrentProfit &gt; Profit Or TrackerCurrentProfit &lt; -Loss]" sap:VirtualizedContainerService.HintSize="884,1752" sap2010:WorkflowViewState.IdRef="If_1">
+                    <ui:LogMessage DisplayName="Log Current tickers profit" sap:VirtualizedContainerService.HintSize="884,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;TrackerINFO || Ticker: &quot;+ TrackerCurrentTicker + &quot; // Profit: &quot; + TrackerCurrentProfit.ToString]" />
+                    <If Condition="[TrackerCurrentProfit &gt; Profit Or TrackerCurrentProfit &lt; -Loss]" sap:VirtualizedContainerService.HintSize="884,1754" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="848,1564" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence sap:VirtualizedContainerService.HintSize="848,1566" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" DisplayName="Onscreen info on sold position" sap:VirtualizedContainerService.HintSize="806,84" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Selling &quot; + TrackerCurrentTicker + &quot; with &quot; + TrackerCurrentProfit.ToString + &quot; profit.&quot;]" />
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" DisplayName="On screen info on sold position" sap:VirtualizedContainerService.HintSize="806,84" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Selling &quot; + TrackerCurrentTicker + &quot; with &quot; + TrackerCurrentProfit.ToString + &quot; profit.&quot;]" />
                           <ui:LogMessage DisplayName="Log info on sold position" sap:VirtualizedContainerService.HintSize="806,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Selling &quot; + TrackerCurrentTicker + &quot; with &quot; + TrackerCurrentProfit.ToString + &quot; profit.&quot;]" />
                           <uix:NClick ClickType="Single" ContinueOnError="True" DelayAfter="1" DelayBefore="1" DisplayName="Click ticker name on open position list" sap:VirtualizedContainerService.HintSize="806,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1fe88d5-c164-4114-98da-a7f626f5f258" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="568, 147, 907, 39" FullSelectorArgument="&lt;webctrl aaname='BITCOINCASH' parentid='openTradesGrid' tag='DIV' /&gt;" FuzzyAccuracy="0.9" FuzzySelectorArgument="[String.Format(&quot;&lt;webctrl aaname='{0}' /&gt;&quot;, TrackerCurrentTicker)]" Guid="2076ec68-0b7b-4524-bd17-c84aa8e70fd0" ImageBase64="" InformativeScreenshot="46384ca79f8f76950c1d8527672a582a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='xStation 5' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'DIV'" sap:VirtualizedContainerService.HintSize="806,1020" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d1fe88d5-c164-4114-98da-a7f626f5f258" Version="V1">
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'DIV'" sap:VirtualizedContainerService.HintSize="806,1021" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d1fe88d5-c164-4114-98da-a7f626f5f258" Version="V1">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,804" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,805" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,7 +220,7 @@
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://xstation5.xtb.com/?branch=pl#/demo/loggedIn" DesignTimeRectangle="559, 94, 102, 19" ElementType="Text" FriendlyName="'Open positions'" FullSelectorArgument="&lt;webctrl aaname='Open positions' parentid='contentLayer0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Open positions' parentid='contentLayer0' tag='DIV' type='' class='xs-tab-header xs-tab-header-text' check:innerText='Open positions' /&gt;" Guid="8aaff097-4ee8-4b08-acde-3ed2b030c7c4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAXCAYAAADjndqIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOKSURBVGhD7VdPSxtBFO+X6Afw4tUvkOYs5ORBvJhciqAVagmKopS2UCwIihDxsOSQ5GAEI8VASsASSNiDSUBUShaEAWE/yK9vdmaS2WSduNhYF/bwg519s+/fb957s2/eTk0jxutHTFREEBMVEcRERQQxURFBTFREEBOlsHmCtuOgtr8QLJ/aQbHjoFc/QCpQPlmEJyqxAavlgD24cF0X7I8N61MyeG+UsFcHo3japRWx3qyiR+vexY7cc4Aao5g7J8jo370QQhK1hvItJ4jh5ncFxQsbPU4Ys5GbD9ofYYwQ9X8Rjqiv4tS5jSPMyHcpy/YqSwWUvXBo7eCmw7z3LuuivD2ouLnDBnr8ZHKZXo1ST7tly2plaJ/u9O3oMNtIIpMjG7LiXSfAvpLdd3G+lxYyPQ5JkreHw7Zoj4Umf3aqyHq6Utg662qdpYH9RWGjv7djo3kv5Z0KsokxPhgQiqjVnzxBLpqW9n6eejs3eFXwkiqSSI7ZFVglcshzpo4tvvdDBTd8TUEV81W0OWG3FSxxmUwUu64PZC5VqrKjwWhDJVm3wRrY5UlKqASeYGv9CJcOPT+QjH+nE5VYwAK1Qq+iaCZlFlNk109U6pgOFK3ZVXXgg4pF7WV3qJUKOL8SB6p5PMYHA0IRpRLkI2ooAHXazzeFfLdBMr5eV0Qz1L7r+u5QXqa1TJTSnbPld1KPjjA2UqWu0MuTpA4VTxIl/93iCjLLabzjenWi+Hqk9fnjzLW4zS6KsuV/qXMyhA/9vV4lDuk2+WDAhCpqkER9LZ55gDrk3mcQpa/3vQRq3/n0JrFaUq2V8ODgMrci2msootSsHlS83ycDUSYfDHj2jJqhfqsHOJzEoNN+ecxPEccalj6+R4q3pWcQNWqDnreFzFdRs2nP7txsCnOfLdF2VLJDETWoKEvOnSdXlMkHA8IRNZWmfwmuWNz6rDPt1icHqUji0PyQwfVnlGOjnC+g+OuOhrCUhSbqERumGSXtM7uA1eVvKF9zG+S7dlD6xKxLPTQzrR9r9M5P1JNmVBBRJh+8b4MRkijCmP8okUQikn4OuXzk1rdHyZM3IZc5aOY3fK3n6UQZbOi3Kt+tj9pOXh4uLrunYX8YcOvz9qapauStshV060siezrm1vdY63vMBwPCEzUGw21pEngJG68NMVERQUxURPDPiYoxGcRERQQxURFBTFQkMI2/Pvtw934e3DUAAAAASUVORK5CYII=" InformativeScreenshot="b056b500034d22e7a9f01054202f1c85.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='xStation 5' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                           <uix:Target DesignTimeRectangle="565, 127, 56, 15" ElementType="Text" FriendlyName="'POSITION'" FullSelectorArgument="&lt;webctrl parentid='slickgrid_438489position' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='slickgrid_438489position' tag='SPAN' type='' class='slick-column-name' aaname='POSITION' check:innerText='POSITION' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAATCAYAAADMBm6RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKVSURBVFhH7VVdaxpBFO2fEPoiVJFFtFhBDI0EEaNtQ0iyGKJSSYOmSJVam6DStBEtzZplEUUXH/bXnt7ZndXJlm7cPBofDszcOzP3Y86ZeeELSHhO2Ba86dgWvOnwVnCqgb5uQNFmGGoLqPMp2qU97o9jpzZAf0y+iQFV+wM5xfdJORx1Rhgy39Thy7Qw1AfISxJiVVrDzmb7l3FmqB9HkPgyg/qjiJePxQpkUL4nW6/I5xKyHTrr24k59lRwqDKCetdALGjNw+c0n3aQpnH0QiNfC4kw88VxdEtBOwVzXao1g0IJhMx9cRxcDVB+lzR90Rrt+11FmMZ2nH9teyjfGeie71p+l1i+N1V0qVl2Xr5ADhXNwHUpbvo9FZzvrTrFYCZGDYgGT3A5WaB+GFn6WFetLh+Sz0D7NLb0rRDDwU8D/XpOsCUhDx228Ee09SkqaRq7xqK5/Asq+RV9hot9mr9t4EYfQU5Yaz0UbCXelHmg1wU0x1RIiW7qmAWhjvKbt5O+qTG6x5C+IjoS/a/rVWSzSU5LQpDOmC9w+cHe9x+beL5rLMYmklqvgQoxov85A//ZgCj/HTt8/foFc/2qE0tXw/EIzVIOfjrI1NftJ7yy1waLaOpi0hGEsgXIX0mjc+H2BP0u47zv0O08tIn6dY9l6ZdRP1GfQr1voSzol2Htgp36XYFTkLpp2/yn1NUHt7CCSD/v+n0klqlfDWX2gJnNJGrTI2nrl2Htgp36XcHSoXLFfSLVg7vI0wNV2XfI4Iwl8AT9usVic1O/dqMtCaqCfhnWLNihXwf8mQa67LshuisTbUl19oKmicYK0VhhX4gggyfp1zWWrV/76+JsEvTL4OHR2gxsC950bAvedDyzgiX8BZ673itTZiaDAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                                         </scg:List>
                                       </uix:TargetAnchorable.Anchors>
@@ -252,7 +251,7 @@
                             <uix:NCheckState.Target>
                               <uix:TargetAnchorable Accuracy="0.87" BrowserURL="https://xstation5.xtb.com/?branch=pl#/demo/loggedIn" DesignTimeRectangle="1873, 267, 32, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='openTradesGrid' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='slick-sub-cell slickgrid-cell-align-left' parentid='openTradesGrid' tag='DIV' aaname='' /&gt;" Guid="203d5a71-9984-45fd-a886-4083978afab6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVEhLYxBVVPs/kHjUAUQ5QFpJgygxcjBBB7QZWP4/buH8X1lZEy4GYoPEQHLIasnBeB0Asui2ldv/73ZecEfALAeJgeSQHUYOJhgChqraKI5Athwkh00PKZioNIDsCGpaDsJEOQAUzCcsIT4HYRCb0qCHYYIOQI9z5OighiPwOkABmNXQ4xw9TYDUYNNLLMbrAHEl9f9LTGwx4hzmCJAcSA2yHlIxwSgAWaCpooUhDhKj1HIQJioR0hKPOmDUASPdAWr/AUBejQQdTGU/AAAAAElFTkSuQmCC" InformativeScreenshot="810e395bdf5b66b87f3ede2a9d5871ad.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='xStation 5' /&gt;" SearchSteps="Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target DesignTimeRectangle="1811, 269, 64, 16" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' parentid='openTradesGrid' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='slick-sub-cell slickgrid-cell-align-center' parentid='openTradesGrid' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAUCAYAAAA0nZtFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVFhHYxBVVPs/ihF4NEDQMF0CpHf6vP/7jp3DiUHy2PSRiqXUdf6LK2tglSMW0yVAQJ7GJg7DhOSJxUa2zv8nz170X9XADKs8MXjYBQjIrPXb9/938gnCqoYQplmAoGcTbGpgmJQAkVLV+t8xcfr/XYdPo5iPjncfOf3f1MEVqxn4MM0CBOQobGxsmJA8Mg5PTP8/ac7i/3Ja+hhygzqF0CpAskqqwRib3KAuQ2gVIJEpWf/NnNyxyg3qWoZWAYKMQZ6XUtPGKmfp4vk/KiUbqxw+TJcAIdgOmTYXRS8xGJQtQGWJka0TVnl8WQsfpkuAYMOE5PFhUIEJKjhBZmALEFCBCwosUAGMLkcID7kAMXV0A1epIP24MKhKBlXNoCoamxn4MM0ChBbZBIbBKWQH7hRCCaZZgNAaqxriL0PIxUM2QEAYXMsAq1pscuTiIR0gtMCjAYKGRwMEDY8GCApW+w8A5SnkHaaS/gIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
@@ -285,24 +284,12 @@
     <ui:LogMessage DisplayName="Log buylist and tickerdates state at the end of trackloop" sap:VirtualizedContainerService.HintSize="1036,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Leaving track loop with &quot; + BuyList.Count.ToString + &quot; items on buy list and &quot; + TickerDates.Count.ToString + &quot;ticker in TickerDate dictionary&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Buy Loop workflow" sap:VirtualizedContainerService.HintSize="636,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Buy Loop.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="BuyList">
-          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="BuyList" />
-        </InArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, s:DateTime)" x:Key="TickerDates">
-          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:DateTime)" ExpressionText="TickerDates" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="Profit">
-          <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="Profit" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="Loss">
-          <mva:VisualBasicValue x:TypeArguments="x:Double" ExpressionText="Loss" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="Multiplier">
-          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Multiplier" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="WaitTime">
-          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="WaitTime" />
-        </InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="BuyList">[BuyList]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, s:DateTime)" x:Key="TickerDates">[TickerDates]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="Profit">[Profit]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="Loss">[Loss]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="Multiplier">[Multiplier]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="WaitTime">[WaitTime]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
